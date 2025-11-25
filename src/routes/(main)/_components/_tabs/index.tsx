@@ -1,4 +1,5 @@
 import TabHome from './home'
+import TabIntroduction from './introduction'
 
 export const MainTabs: { name: string; href: string; component: React.ReactNode }[] = [
   {
@@ -8,8 +9,8 @@ export const MainTabs: { name: string; href: string; component: React.ReactNode 
   },
   {
     name: '소개',
-    href: '/about',
-    component: <div>About</div>,
+    href: '/introduction',
+    component: <TabIntroduction />,
   },
 ] as const
 

@@ -14,7 +14,7 @@ export default function MainHeader({
   const { toggleMode } = useThemeStore()
 
   return (
-    <header className='fixed top-0 right-0 left-0 z-50 w-full border-b border-gray-300'>
+    <header className='bg-bg fixed top-0 right-0 left-0 z-50 w-full border-b border-gray-300'>
       <div className='container mx-auto flex h-[56px] items-center justify-between px-4'>
         {/* Left header */}
         <div className='from-gradient-from to-gradient-to cursor-default bg-linear-to-r bg-clip-text font-bold text-transparent'>

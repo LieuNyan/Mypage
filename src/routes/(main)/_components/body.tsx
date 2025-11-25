@@ -9,7 +9,7 @@ export default function MainBody({
   setActiveTab: (tab: MainTab) => void
 }) {
   return (
-    <div className='container mx-auto flex flex-auto flex-col overflow-y-auto px-4'>
+    <div className='container mx-auto mt-[56px] flex flex-auto flex-col space-y-5 overflow-y-auto px-4'>
       {MainTabs.map((tab) => (
         <Fragment key={tab.href}>{tab.component}</Fragment>
       ))}
