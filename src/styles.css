@@ -22,3 +22,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+@theme {
+  --color-bg: #fffdfa;
+  --color-text: #888888;
+  --color-accent: #000000;
+
+  /** Text gradient colors */
+  --color-gradient-from: #2f6bd8;
+  --color-gradient-to: #7a3bf6;
+}
+
+:root.dark {
+  --color-bg: #0e1a24;
+  --color-text: #bcbcbc;
+  --color-accent: #ffffff;
+}
