@@ -1,7 +1,7 @@
 import { useThemeStore } from '@/_store/theme'
 import { MainTabs, type MainTab } from '../_components/_tabs'
 
-import { Menu, Sun } from 'lucide-react'
+import { Sun } from 'lucide-react'
 import cn from '@/_utils/cn'
 
 export default function MainHeader({
@@ -17,7 +17,7 @@ export default function MainHeader({
     <header className='bg-bg fixed top-0 right-0 left-0 z-50 w-full border-b border-gray-300'>
       <div className='container mx-auto flex h-[56px] items-center justify-between px-4'>
         {/* Left header */}
-        <div className='from-gradient-from to-gradient-to cursor-default bg-linear-to-r bg-clip-text font-bold text-transparent'>
+        <div className='from-gradient-from to-gradient-to w-[80px] cursor-default bg-linear-to-r bg-clip-text text-start font-bold text-transparent'>
           LieuNyan
         </div>
 
@@ -39,16 +39,9 @@ export default function MainHeader({
         </div>
 
         {/* Right header */}
-        <div className='flex items-center gap-4'>
+        <div className='flex w-[80px] items-center justify-end gap-4'>
           <button onClick={toggleMode}>
             <Sun className={'text-text hover:text-accent cursor-pointer hover:scale-110'} />
-          </button>
-          <button
-            onClick={() => {
-              console.log('Open Menu')
-            }}
-          >
-            <Menu className={'text-text hover:text-accent cursor-pointer hover:scale-110'} />
           </button>
         </div>
       </div>
