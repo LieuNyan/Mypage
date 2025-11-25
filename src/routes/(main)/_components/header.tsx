@@ -22,7 +22,7 @@ export default function MainHeader({
         </div>
 
         {/* Center header */}
-        <div className='flex items-center gap-3'>
+        <div className='flex items-center gap-3 max-md:hidden'>
           {MainTabs.map((tab) => (
             <div key={tab.href} className='cursor-pointer' onClick={() => setActiveTab(tab)}>
               <span

@@ -8,12 +8,18 @@ export default function MainBody({
   activeTab: MainTab
   setActiveTab: (tab: MainTab) => void
 }) {
+  const isFirstRender = useRef(true)
   const tabRefs = useRef<(HTMLElement | null)[]>([])
 
   const isScrolling = useRef(false)
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+
     if (isScrolling.current) return
 
     const index = MainTabs.findIndex((t) => t.href === activeTab.href)
