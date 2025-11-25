@@ -3,23 +3,40 @@ import TabLayout from './layout'
 export default function TabIntroduction() {
   return (
     <TabLayout>
-      <div className='mb-5 flex flex-col items-center justify-center gap-2'>
-        <h1 className='text-accent text-4xl font-bold'>LieuNyan</h1>
-        <h2 className='from-gradient-from to-gradient-to bg-linear-to-r bg-clip-text text-3xl font-semibold text-transparent'>
-          웹 전문 풀스택 개발자
-        </h2>
-      </div>
+      {/* 소개 */}
+      <div className='mx-auto flex max-w-3xl flex-col items-center justify-center px-4'>
+        {/* 제목 */}
+        <div className='text-accent mb-3 text-4xl font-bold'>소개</div>
 
-      {/* 소개 텍스트 — 기본 텍스트 색 */}
-      <p className='text-text w-full max-w-[540px] text-center text-lg leading-relaxed break-keep'>
-        5년차 풀스택 개발자로, 웹 애플리케이션부터 모바일 웹뷰 애플리케이션까지,
-        <br />
-        <span className='text-accent font-semibold'>웹 서비스 전반</span>에 대한 전문성을 보유하고
-        있습니다.
-        <br />
-        프론트엔드, 백엔드, 인프라까지 전 영역을 아우르며, 서비스 전반의 흐름을 이해하고 실질적인
-        비즈니스 가치를 만들어 냅니다.
-      </p>
+        {/* 그라데이션 밑줄 */}
+        <div className='from-gradient-from to-gradient-to mb-6 h-1 w-20 rounded-full bg-linear-to-r' />
+
+        {/* 텍스트 박스 */}
+        <div className='border-accent/20 rounded-xl border p-6 shadow-lg'>
+          {/* 제목 */}
+          <div className='text-accent mb-3 text-2xl font-semibold'>
+            웹 영역을 모두 아우를 수 있는 웹 서비스 개발자
+          </div>
+
+          {/* 내용 */}
+          <div className='text-muted-foreground text-accent/80 leading-relaxed break-keep'>
+            저는 웹 및 웹앱 서비스를 만드는{' '}
+            <span className='text-accent font-semibold'>웹 서비스 중심 풀스택 개발자</span>입니다.
+            <br />
+            최근 프로젝트에서 PC·모바일 웹부터 Android 및 iOS WebView까지 아우르는 서비스를 리드
+            개발했으며, 다양한 환경에서 발생하는 웹 이슈를 해결하며 폭넓은 웹 기술 역량을
+            쌓아왔습니다.
+            <br />
+            Node.js 기반 기술 스택을 중심으로, 프로젝트 상황에 맞는 기술을 적절히 조합하여
+            활용합니다.
+            <br />
+            프론트엔드와 백엔드의 유기적인 통합을 지향하며, 서비스의 기초부터 인프라까지 처음부터
+            직접 구축해온 경험이 많습니다.
+            <br />
+            혼자서도, 함께여도, 끈기 있게 문제의 근본적인 해결책을 찾아내는 개발자입니다.
+          </div>
+        </div>
+      </div>
     </TabLayout>
   )
 }

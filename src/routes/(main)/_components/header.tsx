@@ -40,16 +40,16 @@ export default function MainHeader({
 
         {/* Right header */}
         <div className='flex items-center gap-4'>
-          <Sun
-            className={'text-text hover:text-accent cursor-pointer hover:scale-110'}
-            onClick={toggleMode}
-          />
-          <Menu
-            className={'text-text hover:text-accent cursor-pointer hover:scale-110'}
+          <button onClick={toggleMode}>
+            <Sun className={'text-text hover:text-accent cursor-pointer hover:scale-110'} />
+          </button>
+          <button
             onClick={() => {
               console.log('Open Menu')
             }}
-          />
+          >
+            <Menu className={'text-text hover:text-accent cursor-pointer hover:scale-110'} />
+          </button>
         </div>
       </div>
     </header>
