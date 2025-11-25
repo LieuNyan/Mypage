@@ -14,6 +14,7 @@ const config = {
   arrowParens: 'always',
   endOfLine: 'auto',
   htmlWhitespaceSensitivity: 'css',
-};
+  plugins: ['prettier-plugin-tailwindcss'],
+}
 
-export default config;
+export default config
