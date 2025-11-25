@@ -22,7 +22,7 @@ export default function MainBody({
     if (el) {
       el.scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'end',
       })
     }
   }, [activeTab])
