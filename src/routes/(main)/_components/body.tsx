@@ -1,7 +1,18 @@
-export default function MainBody() {
+import { Fragment } from 'react/jsx-runtime'
+import { MainTabs, type MainTab } from './_tabs'
+
+export default function MainBody({
+  activeTab,
+  setActiveTab,
+}: {
+  activeTab: MainTab
+  setActiveTab: (tab: MainTab) => void
+}) {
   return (
-    <main className='container mx-auto flex-auto px-4'>
-      <h1>Main Body</h1>
-    </main>
+    <div className='container mx-auto flex flex-auto flex-col overflow-y-auto px-4'>
+      {MainTabs.map((tab) => (
+        <Fragment key={tab.href}>{tab.component}</Fragment>
+      ))}
+    </div>
   )
 }

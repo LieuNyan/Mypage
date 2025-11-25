@@ -14,41 +14,43 @@ export default function MainHeader({
   const { toggleMode } = useThemeStore()
 
   return (
-    <header className='container mx-auto flex h-[56px] items-center justify-between px-4'>
-      {/* Left header */}
-      <div className='from-gradient-from to-gradient-to cursor-default bg-linear-to-r bg-clip-text font-bold text-transparent'>
-        LieuNyan
-      </div>
+    <header className='fixed top-0 right-0 left-0 z-50 w-full border-b border-gray-300'>
+      <div className='container mx-auto flex h-[56px] items-center justify-between px-4'>
+        {/* Left header */}
+        <div className='from-gradient-from to-gradient-to cursor-default bg-linear-to-r bg-clip-text font-bold text-transparent'>
+          LieuNyan
+        </div>
 
-      {/* Center header */}
-      <div className='flex items-center gap-3'>
-        {MainTabs.map((tab) => (
-          <div key={tab.href} className='cursor-pointer' onClick={() => setActiveTab(tab)}>
-            <span
-              className={cn(
-                'relative text-sm font-medium transition-all duration-200',
-                'hover:text-accent hover:scale-110',
-                activeTab.href === tab.href ? 'text-accent' : 'text-text',
-              )}
-            >
-              {tab.name}
-            </span>
-          </div>
-        ))}
-      </div>
+        {/* Center header */}
+        <div className='flex items-center gap-3'>
+          {MainTabs.map((tab) => (
+            <div key={tab.href} className='cursor-pointer' onClick={() => setActiveTab(tab)}>
+              <span
+                className={cn(
+                  'relative text-sm font-medium transition-all duration-200',
+                  'hover:text-accent hover:scale-110',
+                  activeTab.href === tab.href ? 'text-accent' : 'text-text',
+                )}
+              >
+                {tab.name}
+              </span>
+            </div>
+          ))}
+        </div>
 
-      {/* Right header */}
-      <div className='flex items-center gap-4'>
-        <Sun
-          className={'text-text hover:text-accent cursor-pointer hover:scale-110'}
-          onClick={toggleMode}
-        />
-        <Menu
-          className={'text-text hover:text-accent cursor-pointer hover:scale-110'}
-          onClick={() => {
-            console.log('Open Menu')
-          }}
-        />
+        {/* Right header */}
+        <div className='flex items-center gap-4'>
+          <Sun
+            className={'text-text hover:text-accent cursor-pointer hover:scale-110'}
+            onClick={toggleMode}
+          />
+          <Menu
+            className={'text-text hover:text-accent cursor-pointer hover:scale-110'}
+            onClick={() => {
+              console.log('Open Menu')
+            }}
+          />
+        </div>
       </div>
     </header>
   )

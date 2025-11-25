@@ -1,7 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import MainHeader from './_components/header'
 import MainBody from './_components/body'
-import Divider from '@/_components/divider'
 import { MainTabs, type MainTab } from './_components/_tabs'
 import { useEffect, useState } from 'react'
 import cn from '@/_utils/cn'
@@ -18,6 +17,7 @@ function App() {
     const html = document.documentElement
     if (mode === 'dark') {
       html.classList.add('dark')
+      html.classList.add('bg-bg')
     } else {
       html.classList.remove('dark')
     }
@@ -30,12 +30,11 @@ function App() {
       className={cn(
         'flex min-h-screen flex-col',
         'transition-colors duration-300 ease-out',
-        'bg-(--color-bg)',
+        'bg-bg',
       )}
     >
       <MainHeader activeTab={activeTab} setActiveTab={setActiveTab} />
-      <Divider />
-      <MainBody />
+      <MainBody activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
   )
 }
