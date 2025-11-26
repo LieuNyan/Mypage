@@ -1,5 +1,6 @@
 import { MailIcon, Zap, Handshake } from 'lucide-react'
 import TabLayout from './layout'
+import ContactForm from '../_items/_form/contact'
 
 export default function TabContact() {
   return (
@@ -59,62 +60,7 @@ export default function TabContact() {
         </div>
 
         {/* 문의 폼 */}
-        <div className='bg-background/20 border-border rounded-2xl border px-5 py-6'>
-          <form
-            className='flex flex-col gap-4'
-            onSubmit={(e) => {
-              e.preventDefault()
-            }}
-          >
-            {/* 이름 */}
-            <div className='flex flex-col gap-1'>
-              <label className='text-text text-sm font-medium'>이름</label>
-              <input
-                type='text'
-                placeholder='성함을 입력해주세요'
-                className='border-border bg-background-secondary/5 text-accent placeholder:text-text/70 focus:ring-colorful rounded-xl border px-4 py-3 text-sm outline-none focus:ring-2'
-              />
-            </div>
-
-            {/* 이메일 */}
-            <div className='flex flex-col gap-1'>
-              <label className='text-text text-sm font-medium'>이메일</label>
-              <input
-                type='email'
-                placeholder='이메일 주소를 입력해주세요'
-                className='border-border bg-background-secondary/5 text-accent placeholder:text-text/70 focus:ring-colorful rounded-xl border px-4 py-3 text-sm outline-none focus:ring-2'
-              />
-            </div>
-
-            {/* 제목 */}
-            <div className='flex flex-col gap-1'>
-              <label className='text-text text-sm font-medium'>제목</label>
-              <input
-                type='text'
-                placeholder='문의 제목을 입력해주세요'
-                className='border-border bg-background-secondary/5 text-accent placeholder:text-text/70 focus:ring-colorful rounded-xl border px-4 py-3 text-sm outline-none focus:ring-2'
-              />
-            </div>
-
-            {/* 메시지 */}
-            <div className='flex flex-col gap-1'>
-              <label className='text-text text-sm font-medium'>메시지</label>
-              <textarea
-                rows={6}
-                placeholder='문의하실 내용을 자세히 적어주세요...'
-                className='border-border bg-background-secondary/5 text-accent placeholder:text-text/70 focus:ring-colorful resize-none rounded-xl border px-4 py-3 text-sm outline-none focus:ring-2'
-              />
-            </div>
-
-            {/* 버튼 */}
-            <button
-              type='submit'
-              className='from-gradient-from to-gradient-to mt-2 h-12 w-full cursor-pointer rounded-xl bg-linear-to-r text-sm font-semibold text-white shadow-lg shadow-black/40 transition-transform hover:scale-[1.01] active:scale-[0.99]'
-            >
-              문의하기
-            </button>
-          </form>
-        </div>
+        <ContactForm />
       </div>
     </TabLayout>
   )
