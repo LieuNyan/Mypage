@@ -143,14 +143,14 @@ function SkillCard({ skill }: { skill: (typeof Skills_Categoryized)[number]['ski
   return (
     <div
       className={cn(
-        'bg-card border-border bg-text/10 flex flex-col gap-3 rounded-2xl border p-4 transition-all duration-200 md:p-5',
+        'bg-card border-border bg-background-secondary/20 flex flex-col gap-3 rounded-2xl border p-4 transition-all duration-200 md:p-5',
         'hover:scale-[1.01] hover:shadow-[0_0_25px_rgba(56,189,248,0.35)]',
       )}
     >
       {/* 상단: 아이콘 + 이름 + 퍼센트 */}
       <div className='flex items-center justify-between gap-3'>
         <div className='flex items-center gap-2'>
-          <div className='bg-accent/10 text-accent flex h-6 w-6 items-center justify-center rounded-xl p-1'>
+          <div className='bg-background-secondary/20 text-accent flex h-6 w-6 items-center justify-center rounded-xl p-1'>
             {skill.icon}
           </div>
           <div className='text-accent text-sm font-semibold md:text-base'>{skill.name}</div>
@@ -178,7 +178,6 @@ function SkillCard({ skill }: { skill: (typeof Skills_Categoryized)[number]['ski
 export default function TabSkill() {
   return (
     <TabLayout>
-      {/* 소개 */}
       <div className='mx-auto flex max-w-3xl flex-col items-center justify-center px-4'>
         {/* 제목 */}
         <div className='text-accent mb-3 text-4xl font-bold'>기술</div>
@@ -188,7 +187,7 @@ export default function TabSkill() {
       </div>
 
       {/* 기술 박스 */}
-      <div className='border-border w-full rounded-xl border p-6 shadow-lg'>
+      <div className='border-border w-full max-w-3xl rounded-xl border p-6 shadow-lg'>
         <section className='space-y-10'>
           {Skills_Categoryized.map((category) => (
             <div key={category.category} className='space-y-4'>
@@ -196,7 +195,7 @@ export default function TabSkill() {
               <div className='flex flex-col gap-2'>
                 {/* 카테고리 헤더 (Backend, Frontend 등) */}
                 <div className='flex items-center gap-2'>
-                  <div className='bg-text/10 text-accent flex h-8 w-8 items-center justify-center rounded-xl p-2'>
+                  <div className='bg-background-secondary/20 text-accent flex h-8 w-8 items-center justify-center rounded-xl p-2'>
                     {category.icon}
                   </div>
                   <h2 className='text-accent text-lg font-semibold md:text-xl'>

@@ -28,7 +28,7 @@ export const FrontendToolIcon = () => <Box className='text-accent h-5 w-5' />
 
 export const AppIcon = () => <Smartphone className='text-accent h-6 w-6' />
 export const AndroidIcon = () => <SmartphoneCharging className='h-5 w-5 text-green-500' />
-export const IosIcon = () => <Smartphone className='h-5 w-5 text-gray-300' />
+export const IosIcon = () => <Smartphone className='h-5 w-5 text-yellow-500' />
 
 export const InfraIcon = () => <Cloud className='text-accent h-6 w-6' />
 export const AwsIcon = () => <Cloud className='h-5 w-5 text-yellow-500' />

@@ -18,8 +18,8 @@ const Tags = [
 
 const TagCard = ({ tag }: { tag: (typeof Tags)[number] }) => {
   return (
-    <div className='bg-text/5 flex flex-1 items-center gap-3 rounded-2xl px-4 py-3'>
-      <div className='bg-accent/5 text-accent flex h-9 w-9 flex-none items-center justify-center rounded-xl'>
+    <div className='border-border bg-background-secondary/20 flex flex-1 items-center gap-3 rounded-2xl border px-4 py-3'>
+      <div className='bg-background-secondary/50 text-accent flex h-9 w-9 flex-none items-center justify-center rounded-xl'>
         {tag.icon}
       </div>
       <p className='text-accent text-sm'>{tag.content}</p>
