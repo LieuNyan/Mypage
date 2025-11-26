@@ -39,7 +39,7 @@ export default function TabIntroduction() {
         <div className='from-gradient-from to-gradient-to mb-6 h-1 w-20 rounded-full bg-linear-to-r' />
 
         {/* 텍스트 박스 */}
-        <div className='border-accent/20 rounded-xl border p-6 shadow-lg'>
+        <div className='border-border rounded-xl border p-6 shadow-lg'>
           {/* 제목 */}
           <div className='text-accent mb-3 text-2xl font-semibold'>
             웹 영역을 모두 아우를 수 있는 웹 서비스 개발자

@@ -28,6 +28,10 @@ code {
   --color-text: #888888;
   --color-accent: #000000;
 
+  --color-background: #c0c0c0;
+  --color-background-secondary: #b9b9b9;
+  --color-border: #a6a6a6;
+
   /** Text gradient colors */
   --color-gradient-from: #2f6bd8;
   --color-gradient-to: #7a3bf6;
@@ -40,6 +44,10 @@ code {
   --color-bg: #0e1a24;
   --color-text: #bcbcbc;
   --color-accent: #ffffff;
+
+  --color-background: #111a22;
+  --color-background-secondary: #19232d;
+  --color-border: #33404c;
 
   /** Colorful color */
   --color-colorful: #5b8bff;

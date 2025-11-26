@@ -1,3 +1,4 @@
+import TabContact from './contact'
 import TabExperience from './experience'
 import TabHome from './home'
 import TabIntroduction from './introduction'
@@ -23,6 +24,11 @@ export const MainTabs: { name: string; href: string; component: React.ReactNode 
     name: '기술',
     href: '/skill',
     component: <TabSkill />,
+  },
+  {
+    name: '문의',
+    href: '/contact',
+    component: <TabContact />,
   },
 ] as const
 

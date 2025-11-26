@@ -35,7 +35,7 @@ export default function TabHome() {
         {Skills.map((el) => (
           <span
             key={el}
-            className='text-accent border-accent/20 rounded-full border px-4 py-2 text-sm font-semibold backdrop-blur-sm'
+            className='text-accent border-border rounded-full border px-4 py-2 text-sm font-semibold backdrop-blur-sm'
           >
             {el}
           </span>

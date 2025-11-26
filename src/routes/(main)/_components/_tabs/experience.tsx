@@ -50,7 +50,7 @@ const CareerHistoryCard = ({
   const [open, setOpen] = useState(false)
 
   return (
-    <div className='border-accent/50 bg-text/10 bg-card rounded-3xl border p-6 shadow-[0_0_30px_rgba(0,0,0,0.15)] transition md:p-8'>
+    <div className='border-border bg-text/10 bg-card rounded-3xl border p-6 shadow-[0_0_30px_rgba(0,0,0,0.15)] transition md:p-8'>
       {/* 상단 날짜 */}
       <div className='text-colorful flex items-center gap-2 text-sm font-semibold'>
         <CalendarDays className='h-4 w-4' />
@@ -101,7 +101,7 @@ const CareerHistoryCard = ({
 
       {/* 상세 설명 */}
       {open && (
-        <div className='border-accent/50 mt-4 ml-1 space-y-2 border-l pl-4'>
+        <div className='border-border mt-4 ml-1 space-y-2 border-l pl-4'>
           {careerHistory.detailDescription.map((d, i) => (
             <p key={i} className='text-accent text-sm'>
               • {d}
