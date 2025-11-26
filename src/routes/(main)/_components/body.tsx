@@ -22,6 +22,11 @@ export default function MainBody({
 
     if (isScrolling.current) return
 
+    /** 모바일 환경일 때는 스크롤 이벤트 무시 */
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth <= 400) return
+    }
+
     const index = MainTabs.findIndex((t) => t.href === activeTab.href)
     const el = tabRefs.current[index]
 
