@@ -5,7 +5,7 @@ import ContactForm from '../_items/_form/contact'
 export default function TabContact() {
   return (
     <TabLayout>
-      <div className='mx-auto flex max-w-3xl flex-col gap-8 px-4 py-10'>
+      <div className='flex max-w-3xl flex-col gap-8 px-4 py-10'>
         {/* 헤더 */}
         <div className='flex flex-col items-center text-center'>
           <h1 className='text-accent mb-2 text-4xl font-bold'>문의</h1>
