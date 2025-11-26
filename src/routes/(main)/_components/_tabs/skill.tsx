@@ -214,7 +214,7 @@ export default function TabSkill() {
               {/* 스킬 카드 리스트 */}
               <div className='space-y-3'>
                 {category.skills.map((skill, index) => (
-                  <SkillCard key={skill.name} skill={skill} />
+                  <SkillCard key={index} skill={skill} />
                 ))}
               </div>
             </div>

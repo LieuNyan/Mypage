@@ -1,4 +1,4 @@
-import { MailIcon, SchoolIcon, Star, UserIcon } from 'lucide-react'
+import { MailIcon, SchoolIcon, UserIcon } from 'lucide-react'
 import TabLayout from './layout'
 
 const Tags = [
