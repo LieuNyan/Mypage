@@ -19,8 +19,8 @@ export default function TabContact() {
         {/* 상단 정보 카드들 */}
         <div className='flex flex-col gap-4'>
           {/* 메일 카드 */}
-          <div className='bg-background/20 border-border flex items-center gap-4 rounded-2xl border px-5 py-4'>
-            <div className='bg-background-secondary/50 text-accent flex h-11 w-11 flex-none items-center justify-center rounded-xl'>
+          <div className='border-border flex items-center gap-4 rounded-2xl border px-5 py-4'>
+            <div className='bg-background/30 text-accent flex h-11 w-11 flex-none items-center justify-center rounded-xl'>
               <MailIcon className='h-5 w-5' />
             </div>
             <div className='flex flex-col'>
@@ -31,9 +31,9 @@ export default function TabContact() {
 
           {/* 하단 두 개 카드 */}
           <div className='grid gap-4 md:grid-cols-2'>
-            <div className='bg-background/20 border-border flex items-center gap-3 rounded-2xl border px-5 py-4'>
+            <div className='border-border flex items-center gap-3 rounded-2xl border px-5 py-4'>
               <div className='flex items-center gap-3'>
-                <div className='bg-background-secondary/50 text-accent flex h-10 w-10 flex-none items-center justify-center rounded-xl'>
+                <div className='bg-background/30 text-accent flex h-10 w-10 flex-none items-center justify-center rounded-xl'>
                   <Zap className='h-5 w-5' />
                 </div>
                 <div className='flex flex-col'>
@@ -43,9 +43,9 @@ export default function TabContact() {
               </div>
             </div>
 
-            <div className='bg-background/20 border-border flex items-center gap-3 rounded-2xl border px-5 py-4'>
+            <div className='border-border flex items-center gap-3 rounded-2xl border px-5 py-4'>
               <div className='flex items-center gap-3'>
-                <div className='bg-background-secondary/50 text-accent flex h-10 w-10 flex-none items-center justify-center rounded-xl'>
+                <div className='bg-background/30 text-accent flex h-10 w-10 flex-none items-center justify-center rounded-xl'>
                   <Handshake className='h-5 w-5' />
                 </div>
                 <div className='flex flex-col'>

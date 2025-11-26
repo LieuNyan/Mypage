@@ -37,10 +37,10 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='bg-background/20 border-border rounded-2xl border px-5 py-6'>
+    <div className='border-border rounded-2xl border px-5 py-6'>
       <form className='flex flex-col gap-4' onSubmit={onSubmit}>
         {/* 이름 */}
-        <div className='flex flex-col gap-1'>
+        <div className='flex flex-col gap-2'>
           <label className='text-text text-sm font-medium'>이름</label>
           <input
             type='text'
@@ -52,7 +52,7 @@ export default function ContactForm() {
         </div>
 
         {/* 이메일 */}
-        <div className='flex flex-col gap-1'>
+        <div className='flex flex-col gap-2'>
           <label className='text-text text-sm font-medium'>이메일</label>
           <input
             type='email'
@@ -64,7 +64,7 @@ export default function ContactForm() {
         </div>
 
         {/* 제목 */}
-        <div className='flex flex-col gap-1'>
+        <div className='flex flex-col gap-2'>
           <label className='text-text text-sm font-medium'>제목</label>
           <input
             type='text'
@@ -76,13 +76,13 @@ export default function ContactForm() {
         </div>
 
         {/* 메시지 */}
-        <div className='flex flex-col gap-1'>
+        <div className='flex flex-col gap-2'>
           <label className='text-text text-sm font-medium'>메시지</label>
           <textarea
             name='message'
             required
             rows={6}
-            placeholder='문의하실 내용을 자세히 적어주세요...'
+            placeholder='문의하실 내용을 자세히 적어주세요'
             className='border-border bg-background-secondary/5 text-accent placeholder:text-text/70 focus:ring-colorful resize-none rounded-xl border px-4 py-3 text-sm outline-none focus:ring-2'
           />
         </div>

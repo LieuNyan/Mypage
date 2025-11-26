@@ -143,7 +143,7 @@ function SkillCard({ skill }: { skill: (typeof Skills_Categoryized)[number]['ski
   return (
     <div
       className={cn(
-        'bg-card border-border bg-background-secondary/20 flex flex-col gap-3 rounded-2xl border p-4 transition-all duration-200 md:p-5',
+        'bg-card border-border flex flex-col gap-3 rounded-2xl border p-4 transition-all duration-200 md:p-5',
         'hover:scale-[1.01] hover:shadow-[0_0_25px_rgba(56,189,248,0.35)]',
       )}
     >
