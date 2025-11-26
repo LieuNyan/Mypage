@@ -5,6 +5,7 @@ import { MainTabs, type MainTab } from './_components/_tabs'
 import { useEffect, useState } from 'react'
 import cn from '@/_utils/cn'
 import { useThemeStore } from '@/_store/theme'
+import GithubLink from '@/routes/(main)/_components/_items/github-link'
 
 export const Route = createFileRoute('/(main)/')({
   component: App,
@@ -35,6 +36,8 @@ function App() {
     >
       <MainHeader activeTab={activeTab} setActiveTab={setActiveTab} />
       <MainBody activeTab={activeTab} setActiveTab={setActiveTab} />
+
+      <GithubLink />
     </div>
   )
 }
