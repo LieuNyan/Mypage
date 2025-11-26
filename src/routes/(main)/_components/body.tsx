@@ -1,5 +1,6 @@
 import { MainTabs, type MainTab } from './_tabs'
 import { useEffect, useRef } from 'react'
+import { UAParser } from 'ua-parser-js'
 
 export default function MainBody({
   activeTab,
@@ -24,7 +25,9 @@ export default function MainBody({
 
     /** 모바일 환경일 때는 스크롤 이벤트 무시 */
     if (typeof window !== 'undefined') {
-      if (window.innerWidth <= 400) return
+      const parser = new UAParser(navigator.userAgent)
+      const isMobile = parser.getDevice().type === 'mobile'
+      if (isMobile) return
     }
 
     const index = MainTabs.findIndex((t) => t.href === activeTab.href)
