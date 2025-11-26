@@ -31,10 +31,16 @@ code {
   /** Text gradient colors */
   --color-gradient-from: #2f6bd8;
   --color-gradient-to: #7a3bf6;
+
+  /** Colorful color */
+  --color-colorful: #2f6bd8;
 }
 
 :root.dark {
   --color-bg: #0e1a24;
   --color-text: #bcbcbc;
   --color-accent: #ffffff;
+
+  /** Colorful color */
+  --color-colorful: #5b8bff;
 }

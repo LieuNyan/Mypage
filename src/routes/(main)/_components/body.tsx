@@ -27,8 +27,8 @@ export default function MainBody({
 
     if (el) {
       el.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
+        behavior: 'instant',
+        block: 'start',
       })
     }
   }, [activeTab])

@@ -1,4 +1,31 @@
+import { MailIcon, SchoolIcon, Star, UserIcon } from 'lucide-react'
 import TabLayout from './layout'
+
+const Tags = [
+  {
+    content: '5년차 웹 풀스택 개발자',
+    icon: <UserIcon className='h-4 w-4' />,
+  },
+  {
+    content: '서울시립대학교 수학과 학사',
+    icon: <SchoolIcon className='h-4 w-4' />,
+  },
+  {
+    content: 'lieu3376@gmail.com',
+    icon: <MailIcon className='h-4 w-4' />,
+  },
+] as const
+
+const TagCard = ({ tag }: { tag: (typeof Tags)[number] }) => {
+  return (
+    <div className='bg-text/5 flex flex-1 items-center gap-3 rounded-2xl px-4 py-3'>
+      <div className='bg-accent/5 text-accent flex h-9 w-9 flex-none items-center justify-center rounded-xl'>
+        {tag.icon}
+      </div>
+      <p className='text-accent text-sm'>{tag.content}</p>
+    </div>
+  )
+}
 
 export default function TabIntroduction() {
   return (
@@ -35,6 +62,13 @@ export default function TabIntroduction() {
             <br />
             혼자서도, 함께여도, 끈기 있게 문제의 근본적인 해결책을 찾아내는 개발자입니다.
           </div>
+        </div>
+
+        {/* 태그 박스 */}
+        <div className='mt-5 flex w-full flex-col flex-wrap justify-center gap-2'>
+          {Tags.map((tag, index) => (
+            <TagCard key={index} tag={tag} />
+          ))}
         </div>
       </div>
     </TabLayout>
