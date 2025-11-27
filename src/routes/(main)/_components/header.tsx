@@ -24,7 +24,21 @@ export default function MainHeader({
         {/* Center header */}
         <div className='flex items-center gap-3 max-md:hidden'>
           {MainTabs.map((tab) => (
-            <div key={tab.href} className='cursor-pointer' onClick={() => setActiveTab(tab)}>
+            <div
+              key={tab.href}
+              className='cursor-pointer'
+              onClick={() => {
+                const element = document.getElementById(tab.id)
+                if (element) {
+                  element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  })
+                }
+
+                setActiveTab(tab)
+              }}
+            >
               <span
                 className={cn(
                   'relative text-sm font-medium transition-all duration-200',

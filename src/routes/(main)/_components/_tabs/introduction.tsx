@@ -48,7 +48,7 @@ export default function TabIntroduction() {
           {/* 내용 */}
           <div className='text-muted-foreground text-accent/80 leading-relaxed break-keep'>
             저는 웹 및 웹앱 서비스를 만드는{' '}
-            <span className='text-accent font-semibold'>웹 서비스 중심 풀스택 개발자</span>입니다.
+            <span className='text-accent font-semibold'>웹 서비스 전문 풀스택 개발자</span>입니다.
             <br />
             최근 프로젝트에서 PC·모바일 웹부터 Android 및 iOS WebView까지 아우르는 서비스를 리드
             개발했으며, 다양한 환경에서 발생하는 웹 이슈를 해결하며 폭넓은 웹 기술 역량을

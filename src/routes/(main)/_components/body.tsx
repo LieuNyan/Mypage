@@ -1,6 +1,5 @@
 import { MainTabs, type MainTab } from './_tabs'
 import { useEffect, useRef } from 'react'
-import { UAParser } from 'ua-parser-js'
 
 export default function MainBody({
   activeTab,
@@ -9,51 +8,10 @@ export default function MainBody({
   activeTab: MainTab
   setActiveTab: (tab: MainTab) => void
 }) {
-  const isFirstRender = useRef(true)
   const tabRefs = useRef<(HTMLElement | null)[]>([])
-
-  const isScrolling = useRef(false)
-  const scrollTimeout = useRef<NodeJS.Timeout | null>(null)
-
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false
-      return
-    }
-
-    if (isScrolling.current) return
-
-    /** 모바일 환경일 때는 스크롤 이벤트 무시 */
-    if (typeof window !== 'undefined') {
-      const parser = new UAParser(navigator.userAgent)
-      const isMobile = parser.getDevice().type === 'mobile'
-      if (isMobile) return
-    }
-
-    const index = MainTabs.findIndex((t) => t.href === activeTab.href)
-    const el = tabRefs.current[index]
-
-    if (el) {
-      el.scrollIntoView({
-        behavior: 'instant',
-        block: 'start',
-      })
-    }
-  }, [activeTab])
 
   useEffect(() => {
     const handleScroll = () => {
-      isScrolling.current = true
-
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current)
-      }
-
-      scrollTimeout.current = setTimeout(() => {
-        isScrolling.current = false
-      }, 150)
-
-      // 섹션 판별
       const viewportCenter = window.innerHeight / 2
       let closestIndex = 0
       let minDistance = Infinity
@@ -84,6 +42,7 @@ export default function MainBody({
     <div className='container mx-auto mt-[56px] flex flex-auto flex-col space-y-5 px-4'>
       {MainTabs.map((tab, index) => (
         <section
+          id={tab.id}
           key={tab.href}
           ref={(el) => {
             tabRefs.current[index] = el
